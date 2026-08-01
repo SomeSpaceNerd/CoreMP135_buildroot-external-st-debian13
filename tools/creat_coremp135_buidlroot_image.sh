@@ -17,7 +17,7 @@ clone_buildroot() {
 
 make_buildroot() {
     cd CoreMP135_buildroot
-    make BR2_EXTERNAL=../../.. m5stack_coremp135_515_defconfig
+    make BR2_EXTERNAL=../../.. m5stack_coremp135_defconfig
     [[ -v ROOTFS_SIZE ]] && sed -i 's/^\(BR2_TARGET_ROOTFS_EXT2_SIZE=\).*$/\1"'"${ROOTFS_SIZE}"'"/' .config
     make -j `nproc`
 }
