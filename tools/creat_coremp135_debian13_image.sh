@@ -40,7 +40,7 @@ sudo rm rootfs/etc/systemd/system/network-online.target.wants/networking.service
 sudo sed -i '1a 127.0.0.1       CoreMP135' rootfs/etc/hosts
 
 sudo chroot rootfs/ /usr/bin/dpkg -i /var/gdisk_1.0.9-2.1_armhf.deb
-sudo chroot rootfs/ /usr/bin/dpkg -i /var/network-manager_1.42.4-1_armhf.deb
+#sudo chroot rootfs/ /usr/bin/dpkg -i /var/network-manager_1.42.4-1_armhf.deb # debian 13 comes with 1.52, not needed
 
 
 sudo sync
