@@ -30,7 +30,7 @@ mkdir -p rootfs_overlay/usr/local/m5stack/lib ;sudo cp rootfs/usr/lib/libjpeg* r
 mkdir -p rootfs_overlay/usr/local/m5stack/lib ;sudo cp rootfs/usr/lib/libgif* rootfs_overlay/usr/local/m5stack/lib/ -a
 
 sudo rm rootfs/* -rf
-sudo tar xf debian-minimal-armhf/debian-13-minimal-armhf-2025-04-02/armhf-rootfs-debian-bookworm.tar -C rootfs/
+sudo tar xf debian-minimal-armhf/debian-13-minimal-armhf-2025-04-02/armhf-rootfs-debian-trixie.tar -C rootfs/
 
 sudo cp --preserve=mode,timestamps -r rootfs_overlay/* rootfs/
 sudo cp --preserve=mode,timestamps -r ../overlay_debian13/* rootfs/
