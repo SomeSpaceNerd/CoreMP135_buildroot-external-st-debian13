@@ -33,8 +33,8 @@ sudo rm rootfs/* -rf
 sudo tar xf debian-minimal-armhf/debian-13-minimal-armhf-2025-04-02/armhf-rootfs-debian-trixie.tar -C rootfs/
 
 sudo cp --preserve=mode,timestamps -r rootfs_overlay/* rootfs/
-chmod +x ../overlay_debian13/etc/rc.local
 sudo cp --preserve=mode,timestamps -r ../overlay_debian13/* rootfs/
+sudo chmod +x rootfs/etc/rc.local
 sudo rm rootfs/etc/systemd/system/multi-user.target.wants/nginx.service
 sudo rm rootfs/etc/systemd/system/multi-user.target.wants/networking.service
 sudo rm rootfs/etc/systemd/system/network-online.target.wants/networking.service
