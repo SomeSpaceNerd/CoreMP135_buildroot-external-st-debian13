@@ -4,5 +4,5 @@ After=usb-otg-state.path
 
 [Service]
 Type=oneshot
-ExecStart=bash -c 'if lsmod | grep -q g_serial; then systemctl start serial-getty@ttyGS0.service; fi; exit 0'
+ExecStart=bash -c 'if lsmod | grep -q g_serial; then systemctl start getty@ttyGS0.service; fi; exit 0'
 
