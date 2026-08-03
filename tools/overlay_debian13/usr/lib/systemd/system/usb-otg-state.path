@@ -2,7 +2,7 @@
 Description=Monitor USB OTG State Changes
 
 [Path]
-PathExists=/sys/class/udc/49000000.usb-otg/state
+PathExists=/sys/class/udc/49000000.usb/state
 
 [Install]
 WantedBy=multi-user.target
