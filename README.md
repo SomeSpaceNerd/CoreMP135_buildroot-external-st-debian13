@@ -1,3 +1,17 @@
+## TL;DR
+This README can be a bit confusing and long-winded, so here's all you probably need to know
+
+### Installing the pre-compiled image
+If you just want to install the pre-compiled image, go to the [release](https://github.com/SomeSpaceNerd/CoreMP135_buildroot-external-st-debian13/releases/tag/img-file) and follow the instructions there
+
+### Compiling the image
+**Note: A decently powerful computer with a Debian-based OS is required for this process, I used Ubuntu 22.04.5 LTS in WSL, the complation process can also take around 90 minutes and up to 20GB of disk space**
+1. Clone this repo using `git clone https://github.com/SomeSpaceNerd/CoreMP135_buildroot-external-st-debian13.git`
+2. Move into the tools directory `cd CoreMP135_buildroot-external-st-debian13/tools`
+3. Make sure the scripts are executable using `chmod +x creat_coremp135_buidlroot_image.sh creat_coremp135_debian13_image.sh`
+4. Run the debian build script `./creat_coremp135_debian13_image.sh` (this will also clone the [buildroot repo](https://github.com/m5stack/CoreMP135_buildroot) and [Debian 13 minimal rootfs](https://rcn-ee.com/rootfs/eewiki/minfs/debian-13-minimal-armhf-2025-04-02.tar.xz))
+5. Your .img file will be located at `./build_coremp135_debian13/M5_CoreMP135_debian13_[DATE].img`
+
 # STM32MP1 Buildroot external tree
 
 This repository is a Buildroot `BR2_EXTERNAL` tree dedicated to
